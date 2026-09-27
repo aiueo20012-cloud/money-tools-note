@@ -448,7 +448,7 @@
   }
 
   // --- 8. 初期化 ---
-  document.addEventListener('DOMContentLoaded', function () {
+  function startApp() {
     initMobileMenu();
     initSimCostCalculator();
     initSubCostCalculator();
@@ -460,5 +460,11 @@
 
     // 初回表示
     handleHashChange();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startApp);
+  } else {
+    startApp();
+  }
 })();
