@@ -40,5 +40,8 @@
 - `index.html`: 全14ページを収録したメインHTMLファイル
 - `style.css`: 濃紺（#12304A）と深緑（#1F8A70）をベースにしたレスポンシブスタイルシート
 - `script.js`: クライアント完結のルーターおよび各種計算シミュレーター
-- `vite.config.ts`: `base: './'` の相対パス設定
-- `.github/workflows/deploy.yml`: GitHub Actions用自動デプロイ設定
+- `vite.config.ts`: `base: '/money-tools-note/'` のGitHub Pagesサブパス設定
+- `.github/workflows/deploy.yml`: GitHub Actions用自動デプロイ設定 (mainブランチ自動反映)
+
+公開URLの例:
+`https://aiueo20012-cloud.github.io/money-tools-note/`
