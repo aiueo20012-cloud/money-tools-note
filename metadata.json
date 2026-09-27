@@ -1,0 +1,6 @@
+{
+  "name": "通信費・固定費見直しナビ",
+  "description": "毎月のスマホ代、サブスク代、固定費を見える化し、自分に合う通信費見直しの方法を調べられる静的Webサイト。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

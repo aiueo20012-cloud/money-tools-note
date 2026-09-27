@@ -1,0 +1,1398 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>通信費・固定費見直しナビ | スマホ代・固定費の無料計算シミュレーター</title>
+    <meta name="description" content="毎月のスマホ代、サブスク代、固定費を見える化し、利用者が自分に合う通信費見直しの方法を調べられる無料シミュレーターサイト。ブラウザ完結で個人情報の入力や登録は一切不要です。" />
+    <meta property="og:title" content="通信費・固定費見直しナビ | スマホ代・固定費の無料計算シミュレーター" />
+    <meta property="og:description" content="毎月のスマホ代、サブスク代、固定費を見える化し、利用者が自分に合う通信費見直しの方法を調べられる無料シミュレーターサイト。" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    
+    <!-- スタイルシート（相対パス） -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand-link">
+          <span>通信費・固定費見直しナビ</span>
+          <span class="brand-badge">無料ツール</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+          ☰
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
+          <a href="#top" class="nav-link active">トップ</a>
+          <a href="#sim-cost" class="nav-link">スマホ代計算</a>
+          <a href="#sub-cost" class="nav-link">サブスク計算</a>
+          <a href="#fixed-cost" class="nav-link">固定費診断</a>
+          <a href="#savings-calc" class="nav-link">貯金シミュレーター</a>
+          <a href="#sim-precheck" class="nav-link">格安SIM選び方</a>
+          <a href="#fixed-guide" class="nav-link">見直し基本</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <!-- ==========================================
+           1. トップページ (#top)
+           ========================================== -->
+      <section id="page-top" class="page-view active">
+        <!-- ヒーローセクション -->
+        <div class="hero">
+          <div class="container">
+            <h1 class="hero-title">スマホ代と固定費を見える化して、<br />毎月のムダを見直そう</h1>
+            <p class="hero-subtitle">無料の計算ツールで、毎月と年間の支出をかんたんに確認できます。<br />会員登録や個人情報の入力は一切不要。すべての計算はブラウザ内で安全に行われます。</p>
+            
+            <!-- 3大クイックアクションボタン -->
+            <div class="hero-actions">
+              <a href="#sim-cost" class="btn-primary-action">
+                <span>1. スマホ代を計算する</span>
+                <small>月額・年間・2年コストを試算</small>
+              </a>
+              <a href="#sub-cost" class="btn-primary-action">
+                <span>2. サブスク代を計算する</span>
+                <small>動画・音楽など定額費用の合計</small>
+              </a>
+              <a href="#fixed-cost" class="btn-primary-action">
+                <span>3. 固定費をチェックする</span>
+                <small>通信・光熱・保険の全体診断</small>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <!-- 無料ツール紹介 -->
+          <div class="section">
+            <h2 class="section-title">4つの無料計算ツール</h2>
+            <p class="section-desc">今の支出を入力するだけで、年間の合計額や見直しポイントがすぐ分かります。</p>
+            <div class="tools-grid">
+              <div class="tool-card">
+                <div>
+                  <div class="tool-card-icon">📱</div>
+                  <h3 class="tool-card-title">スマホ代年間コスト計算</h3>
+                  <p class="tool-card-text">基本料、端末代、オプション、割引を入力し、1年間・2年間で実際にいくら支払うのかを可視化します。</p>
+                </div>
+                <a href="#sim-cost" class="btn btn-secondary">スマホ代を計算する →</a>
+              </div>
+
+              <div class="tool-card">
+                <div>
+                  <div class="tool-card-icon">🎬</div>
+                  <h3 class="tool-card-title">サブスク年間コスト計算</h3>
+                  <p class="tool-card-text">動画配信、音楽、ゲーム、有料アプリなど、毎月自動引き落としされている定額サービスを洗い出します。</p>
+                </div>
+                <a href="#sub-cost" class="btn btn-secondary">サブスク代を計算する →</a>
+              </div>
+
+              <div class="tool-card">
+                <div>
+                  <div class="tool-card-icon">📑</div>
+                  <h3 class="tool-card-title">固定費チェック診断</h3>
+                  <p class="tool-card-text">通信費・光熱費・保険料など毎月の固定費全体をまとめて診断。見直しの優先順位と注意点を確認できます。</p>
+                </div>
+                <a href="#fixed-cost" class="btn btn-secondary">固定費をチェックする →</a>
+              </div>
+
+              <div class="tool-card">
+                <div>
+                  <div class="tool-card-icon">💰</div>
+                  <h3 class="tool-card-title">貯金目標シミュレーター</h3>
+                  <p class="tool-card-text">目標金額と現在の貯金額から、毎月の積立額に応じた達成期間や1週間あたりの目安を試算します。</p>
+                </div>
+                <a href="#savings-calc" class="btn btn-secondary">貯金目標を試算する →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 固定費を見直す3ステップ -->
+          <div class="section">
+            <h2 class="section-title">固定費を見直す3ステップ</h2>
+            <p class="section-desc">無理のない家計改善は、毎月自動で節約できる固定費から始めるのが基本です。</p>
+            <div class="steps-container">
+              <div class="step-item">
+                <span class="step-number">STEP 1</span>
+                <h3>現状の支出を「見える化」する</h3>
+                <p>まずはクレジットカード明細や通帳を見て、毎月いくら引き落とされているか金額を把握します。当サイトの計算ツールを使って年間の支払総額を算出してみましょう。</p>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">STEP 2</span>
+                <h3>使っていないサービスから解約する</h3>
+                <p>直近1か月で使わなかった動画サブスクや不要なスマホオプションなど、心理的負担が少なく解約金がかからないものから整理を始めます。</p>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">STEP 3</span>
+                <h3>公式サイトで最新の条件を確認する</h3>
+                <p>格安SIMや光回線の乗り換えは、必ず各通信会社の公式サイトで現在の提供エリア・手数料・解約条件・割引プランを直接確認して進めましょう。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- おすすめ解説ガイド -->
+          <div class="section">
+            <h2 class="section-title">知っておきたい見直しガイド</h2>
+            <p class="section-desc">後悔しない見直しのために、判断基準や注意点を分かりやすくまとめました。</p>
+            <div class="guide-grid">
+              <a href="#sim-precheck" class="guide-card">
+                <span class="guide-card-tag">必須チェック</span>
+                <h3>格安SIMを選ぶ前のチェック</h3>
+                <p>データ使用量、通話時間、生活エリアの電波状況など、乗り換え前に確認すべき6つのポイント。</p>
+              </a>
+              <a href="#sim-compare" class="guide-card">
+                <span class="guide-card-tag">選び方の基準</span>
+                <h3>格安SIM比較の考え方</h3>
+                <p>ランキングに惑わされず、自分に必要な条件を客観的に比較・検討するための整理表。</p>
+              </a>
+              <a href="#kakeibo-guide" class="guide-card">
+                <span class="guide-card-tag">家計の基礎</span>
+                <h3>家計簿の始め方</h3>
+                <p>1円単位の記録は不要。収入・固定費・変動費・予算・貯金の5大要素と挫折しないコツ。</p>
+              </a>
+              <a href="#fixed-guide" class="guide-card">
+                <span class="guide-card-tag">見直し手順</span>
+                <h3>固定費見直しの基本</h3>
+                <p>固定費と変動費の違い、スマホ・サブスク・保険・電気ガスの見直し前に確認すべき事項。</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- 安心の利用環境 -->
+          <div class="security-banner">
+            <div class="security-grid">
+              <div class="security-point">
+                <div class="security-point-icon">🔒</div>
+                <h4>完全無料・登録不要</h4>
+                <p>会員登録やログイン、メールアドレスの入力は一切不要でご利用いただけます。</p>
+              </div>
+              <div class="security-point">
+                <div class="security-point-icon">💻</div>
+                <h4>データはブラウザ内完結</h4>
+                <p>入力した金額や試算データは、お使いの端末（ブラウザ）内でのみ計算され外部サーバーへ保存・送信されません。</p>
+              </div>
+              <div class="security-point">
+                <div class="security-point-icon">🛡️</div>
+                <h4>安心・誠実な情報提供</h4>
+                <p>実在しないランキングや断定的な勧誘は行いません。常に最新の公式サイト情報での確認を推奨しています。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- サイトポリシーリンク -->
+          <div class="notice-box" style="margin-top: 2rem;">
+            <strong>サイト利用に関するご案内</strong>
+            当サイトの計算結果はあくまで一般的な目安です。実際の契約内容や料金は、各サービスの公式サイトで必ずご確認ください。
+            当サイトの運営方針については、<a href="#ad-policy" style="color: var(--color-notice-text); font-weight: 700; text-decoration: underline;">広告・PR方針</a>および<a href="#disclaimer" style="color: var(--color-notice-text); font-weight: 700; text-decoration: underline;">免責事項</a>をご一読ください。
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           2. スマホ代年間コスト計算 (#sim-cost)
+           ========================================== -->
+      <section id="page-sim-cost" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>スマホ代年間コスト計算</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="calc-wrapper">
+            <h1 class="calc-title">📱 スマホ代年間コスト計算</h1>
+            <p class="calc-desc">毎月支払っている基本料や端末代、オプションを入力して、1年間・2年間の支払総額の目安を算出します。空欄や不要な項目は0のままで構いません。</p>
+
+            <form id="sim-cost-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="sim-base">
+                  今のスマホ料金の月額（必須）
+                  <small>基本プラン料金、データ通信料など（半角数字）</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sim-base" class="form-input" placeholder="例: 7000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sim-base-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sim-device">
+                  端末代金の月額（任意）
+                  <small>スマートフォンの分割払い代金（ない場合は0または空欄）</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sim-device" class="form-input" placeholder="例: 3000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sim-device-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sim-option">
+                  オプション料金の月額（任意）
+                  <small>かけ放題、端末補償、留守番電話、セキュリティなど</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sim-option" class="form-input" placeholder="例: 1500" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sim-option-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sim-discount">
+                  家族割・セット割の月額値引き（任意）
+                  <small>光回線セット割や家族複数回線割などの値引き額（ない場合は0）</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sim-discount" class="form-input" placeholder="例: 1000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sim-discount-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sim-months">
+                  何か月使う予定か（必須）
+                  <small>標準は12か月（1年）または24か月（2年）など</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sim-months" class="form-input" value="12" />
+                  <span class="input-unit">か月</span>
+                </div>
+                <div class="form-error" id="sim-months-error"></div>
+              </div>
+
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary" style="flex: 2;">計算する</button>
+                <button type="button" id="sim-cost-reset" class="btn btn-reset" style="flex: 1;">リセット</button>
+              </div>
+            </form>
+
+            <!-- 計算結果ボックス -->
+            <div id="sim-cost-result" class="result-box hidden">
+              <div class="result-header">
+                <span class="result-badge">計算結果</span>
+                <div class="result-card-label">毎月の実質支払額の目安</div>
+                <div class="result-main-value" id="sim-res-monthly">0円</div>
+              </div>
+
+              <div class="result-grid three-col">
+                <div class="result-card">
+                  <div class="result-card-label">1年間の支払目安（12か月）</div>
+                  <div class="result-card-val" id="sim-res-1year">0円</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label">2年間の支払目安（24か月）</div>
+                  <div class="result-card-val" id="sim-res-2year">0円</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label"><span id="sim-res-custom-months">12か月</span>の支払総額</div>
+                  <div class="result-card-val" id="sim-res-custom-val">0円</div>
+                </div>
+              </div>
+
+              <div id="sim-cost-warning" class="notice-box" style="display: none; margin-bottom: 1.25rem;"></div>
+
+              <div class="article-section" style="margin-top: 1.5rem; margin-bottom: 0;">
+                <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--color-primary);">📋 見直すときに確認する項目</h3>
+                <ul style="padding-left: 1.25rem; font-size: 0.9375rem; color: var(--color-text);">
+                  <li><strong>データ使用量:</strong> 毎月実際に何GB消費しているか（契約中のマイページで直近3か月を確認）</li>
+                  <li><strong>通話時間:</strong> 通常の通話発信をどれくらい使っているか（LINE等で済んでいるならかけ放題は外せる可能性あり）</li>
+                  <li><strong>通信エリア:</strong> 自宅や職場、通勤通学路で電波が快適に届くか</li>
+                  <li><strong>解約金や更新月:</strong> 端末分割払いの残債があるか、契約解除に伴う手数料がないか</li>
+                  <li><strong>家族割やセット割:</strong> 自分1人が乗り換えた場合に、家族回線や自宅の光回線割引が外れて負担が増えないか</li>
+                </ul>
+              </div>
+
+              <div style="margin-top: 1.5rem; text-align: center;">
+                <a href="#sim-precheck" class="btn btn-primary">格安SIMを選ぶ前のチェックを見る →</a>
+              </div>
+
+              <div class="notice-box">
+                この結果は目安です。実際の契約内容や料金は、各サービスの公式サイトで確認してください。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           3. サブスク年間コスト計算 (#sub-cost)
+           ========================================== -->
+      <section id="page-sub-cost" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>サブスク年間コスト計算</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="calc-wrapper">
+            <h1 class="calc-title">🎬 サブスク年間コスト計算</h1>
+            <p class="calc-desc">動画配信・音楽・ゲーム・アプリ課金など、毎月引き落とされる定額サービスを洗い出してみましょう。契約していない項目は0円（または空欄）のままで計算できます。</p>
+
+            <form id="sub-cost-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="sub-video">
+                  動画サービス（月額）
+                  <small>映画、アニメ、ドラマ配信サービスなど（半角数字）</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sub-video" class="form-input" placeholder="例: 1490" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sub-video-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sub-music">
+                  音楽サービス（月額）
+                  <small>定額制音楽配信サービスなど</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sub-music" class="form-input" placeholder="例: 1080" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sub-music-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sub-game">
+                  ゲームサービス（月額）
+                  <small>ゲーム遊び放題、オンラインプレイ権など</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sub-game" class="form-input" placeholder="例: 850" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sub-game-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sub-app">
+                  アプリ課金（月額）
+                  <small>クラウドストレージ、有料会員アプリ、作業効率化ツールなど</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sub-app" class="form-input" placeholder="例: 400" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sub-app-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sub-other">
+                  その他の定額サービス（月額）
+                  <small>電子書籍読み放題、定期便、オンラインサロンなど</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="sub-other" class="form-input" placeholder="例: 980" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="sub-other-error"></div>
+              </div>
+
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary" style="flex: 2;">サブスク合計を計算する</button>
+                <button type="button" id="sub-cost-reset" class="btn btn-reset" style="flex: 1;">リセット</button>
+              </div>
+            </form>
+
+            <!-- 計算結果ボックス -->
+            <div id="sub-cost-result" class="result-box hidden">
+              <div class="result-header">
+                <span class="result-badge">計算結果</span>
+                <div class="result-card-label">サブスクの月額合計</div>
+                <div class="result-main-value" id="sub-res-monthly">0円</div>
+              </div>
+
+              <div class="result-grid">
+                <div class="result-card">
+                  <div class="result-card-label">年間支払額の合計（12か月換算）</div>
+                  <div class="result-card-val" id="sub-res-annual">0円</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label">見直しの目安</div>
+                  <div style="font-size: 0.95rem; color: var(--color-primary); font-weight: 700; margin-top: 0.25rem;">
+                    1つ解約するだけでも年間数千〜1万円の節約
+                  </div>
+                </div>
+              </div>
+
+              <div class="notice-box" style="background-color: var(--color-bg-sub); border-color: var(--color-border); color: var(--color-text);">
+                <strong>使っていないサービスがないか確認しましょう</strong>
+                <p id="sub-res-advice" style="margin-top: 0.25rem;">
+                  「無料体験で入ったまま解約を忘れていた」「最近ほとんど見ていない」というサブスクはありませんか？サブスクはいつでも再開できるものがほとんどです。迷ったら一度解約し、本当に必要になったら入り直すのが賢い使い方です。
+                </p>
+              </div>
+
+              <div style="margin-top: 1.5rem; text-align: center;">
+                <a href="#fixed-cost" class="btn btn-primary">固定費チェックをする →</a>
+              </div>
+
+              <div class="notice-box">
+                この結果は目安です。実際の契約内容や料金は、各サービスの公式サイトで確認してください。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           4. 固定費チェック診断 (#fixed-cost)
+           ========================================== -->
+      <section id="page-fixed-cost" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>固定費チェック診断</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="calc-wrapper">
+            <h1 class="calc-title">📑 固定費チェック診断</h1>
+            <p class="calc-desc">通信費、光熱費、保険料など、毎月ほぼ一定で出ていくお金を入力してください。家計全体の固定費ボリュームを可視化し、見直しの優先順位を整理します。</p>
+
+            <form id="fixed-cost-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="fixed-phone">
+                  スマホ料金（月額）
+                  <small>ご自身やご家族の携帯電話代合計（半角数字）</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="fixed-phone" class="form-input" placeholder="例: 8000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="fixed-phone-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="fixed-net">
+                  インターネット料金（月額）
+                  <small>自宅の光回線、ホームルーター、ポケットWi-Fiなど</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="fixed-net" class="form-input" placeholder="例: 5000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="fixed-net-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="fixed-sub">
+                  サブスク料金（月額）
+                  <small>動画、音楽、各種定額サービスの合計</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="fixed-sub" class="form-input" placeholder="例: 2500" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="fixed-sub-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="fixed-ins">
+                  保険料（月額）
+                  <small>民間の生命保険、医療保険、学資保険、自動車保険など</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="fixed-ins" class="form-input" placeholder="例: 10000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="fixed-ins-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="fixed-utility">
+                  電気・ガス料金（月額平均）
+                  <small>季節差があるため、過去数か月の平均目安額</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="fixed-utility" class="form-input" placeholder="例: 12000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="fixed-utility-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="fixed-other">
+                  その他の固定費（月額）
+                  <small>ジム会費、駐車場代、習い事月謝など（家賃除く）</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="fixed-other" class="form-input" placeholder="例: 8000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="fixed-other-error"></div>
+              </div>
+
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary" style="flex: 2;">固定費を診断する</button>
+                <button type="button" id="fixed-cost-reset" class="btn btn-reset" style="flex: 1;">リセット</button>
+              </div>
+            </form>
+
+            <!-- 計算結果ボックス -->
+            <div id="fixed-cost-result" class="result-box hidden">
+              <div class="result-header">
+                <span class="result-badge">診断結果</span>
+                <div class="result-card-label">月額の固定費合計</div>
+                <div class="result-main-value" id="fixed-res-monthly">0円</div>
+              </div>
+
+              <div class="result-card" style="margin-bottom: 1.25rem;">
+                <div class="result-card-label">年間の固定費合計（12か月換算）</div>
+                <div class="result-card-val" id="fixed-res-annual" style="color: var(--color-accent);">0円</div>
+              </div>
+
+              <!-- 内訳 -->
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">📊 入力した固定費の内訳</h3>
+              <div class="result-grid three-col" style="margin-bottom: 1.5rem;">
+                <div class="result-card">
+                  <div class="result-card-label">📱 スマホ代</div>
+                  <div class="result-card-val" style="font-size: 1.15rem;" id="fixed-res-phone">0円</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label">🌐 ネット回線</div>
+                  <div class="result-card-val" style="font-size: 1.15rem;" id="fixed-res-net">0円</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label">🎬 サブスク</div>
+                  <div class="result-card-val" style="font-size: 1.15rem;" id="fixed-res-sub">0円</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label">🛡️ 保険料</div>
+                  <div class="result-card-val" style="font-size: 1.15rem;" id="fixed-res-ins">0円</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label">💡 電気・ガス</div>
+                  <div class="result-card-val" style="font-size: 1.15rem;" id="fixed-res-utility">0円</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label">📦 その他固定費</div>
+                  <div class="result-card-val" style="font-size: 1.15rem;" id="fixed-res-other">0円</div>
+                </div>
+              </div>
+
+              <!-- 見直す前のチェックリスト -->
+              <div class="article-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 1.1rem; color: var(--color-primary); margin-bottom: 0.5rem;">✅ 見直す前のチェックリスト</h3>
+                <ul class="checklist">
+                  <li class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span><strong>契約名義の確認:</strong> 誰の名義で契約されているか、家族割引の親回線になっていないか確認する</span>
+                  </li>
+                  <li class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span><strong>違約金・残債の有無:</strong> 端末の分割残金や、途中解約による違約金・工事費残債が発生しないか調べる</span>
+                  </li>
+                  <li class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span><strong>セット割の連動:</strong> スマホと光回線を別々にすると割引が消えて逆に高額にならないか試算する</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 見直す順番の目安 -->
+              <div class="article-section" style="margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.1rem; color: var(--color-primary); margin-bottom: 0.5rem;">🎯 おすすめの見直し順番</h3>
+                <ol style="padding-left: 1.25rem; font-size: 0.9375rem; color: var(--color-text);">
+                  <li><strong>1. サブスク:</strong> 解約金がなく手続きもWeb完結で簡単なため、最も始めやすい。</li>
+                  <li><strong>2. スマホ料金:</strong> 格安SIMや料金プランの見直しで、月3,000円〜5,000円単位の大きな節約になりやすい。</li>
+                  <li><strong>3. インターネット回線:</strong> スマホとのセット割や工事費残債を計算し、メリットが大きい場合に検討。</li>
+                  <li><strong>4. 電気・ガス:</strong> 供給品質は変わらないため、解約違約金のないプランを比較検討。</li>
+                  <li><strong>5. 保険:</strong> 万が一の補償に関わるため、公的制度（高額療養費制度など）を踏まえ慎重に検討。</li>
+                </ol>
+              </div>
+
+              <div class="notice-box" style="margin-bottom: 1.5rem;">
+                <strong>重要な確認事項</strong>
+                契約変更や解約の前に、契約者、家族、公式サイトで条件を確認してください。
+              </div>
+
+              <div class="btn-group">
+                <a href="#sim-cost" class="btn btn-secondary" style="flex: 1;">スマホ代を計算する</a>
+                <a href="#sim-precheck" class="btn btn-primary" style="flex: 1;">格安SIMを選ぶ前のチェックを見る</a>
+              </div>
+
+              <div class="notice-box" style="margin-top: 1.5rem;">
+                この結果は目安です。実際の契約内容や料金は、各サービスの公式サイトで確認してください。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           5. 貯金目標シミュレーター (#savings-calc)
+           ========================================== -->
+      <section id="page-savings-calc" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>貯金目標シミュレーター</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="calc-wrapper">
+            <h1 class="calc-title">💰 貯金目標シミュレーター</h1>
+            <p class="calc-desc">「旅行に行きたい」「もしもの生活防衛資金を貯めたい」など、目標金額と今ある貯金、毎月の積立額から、達成までの期間と1週間の目安をシミュレーションします。</p>
+
+            <form id="savings-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="savings-target">
+                  目標金額（必須）
+                  <small>例: 100万円なら 1000000（半角数字）</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="savings-target" class="form-input" placeholder="例: 1000000" />
+                  <span class="input-unit">円</span>
+                </div>
+                <div class="form-error" id="savings-target-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="savings-current">
+                  今ある貯金（任意）
+                  <small>現在すでに確保できている金額（ない場合は0または空欄）</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="savings-current" class="form-input" placeholder="例: 200000" />
+                  <span class="input-unit">円</span>
+                </div>
+                <div class="form-error" id="savings-current-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="savings-monthly">
+                  毎月貯める金額（必須）
+                  <small>毎月の手取りから貯金に回す予定の金額</small>
+                </label>
+                <div class="input-group">
+                  <input type="text" inputmode="numeric" id="savings-monthly" class="form-input" placeholder="例: 30000" />
+                  <span class="input-unit">円 / 月</span>
+                </div>
+                <div class="form-error" id="savings-monthly-error"></div>
+              </div>
+
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary" style="flex: 2;">目標までの期間を計算する</button>
+                <button type="button" id="savings-reset" class="btn btn-reset" style="flex: 1;">リセット</button>
+              </div>
+            </form>
+
+            <!-- 計算結果ボックス -->
+            <div id="savings-result" class="result-box hidden">
+              <div class="result-header">
+                <span class="result-badge">シミュレーション結果</span>
+                <div class="result-card-label">あと必要な金額</div>
+                <div class="result-main-value" id="savings-res-diff">0円</div>
+              </div>
+
+              <div class="result-grid">
+                <div class="result-card">
+                  <div class="result-card-label">目標達成までに必要な期間</div>
+                  <div class="result-card-val" id="savings-res-months" style="font-size: 1.25rem;">-</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-card-label">1週間あたりの目安貯金額</div>
+                  <div class="result-card-val" id="savings-res-weekly" style="font-size: 1.25rem;">-</div>
+                </div>
+              </div>
+
+              <div class="notice-box" style="background-color: var(--color-bg-sub); border-color: var(--color-border); color: var(--color-text);">
+                <strong>無理のない貯金のヒント</strong>
+                <p id="savings-res-hint" style="margin-top: 0.25rem;"></p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--color-text-sub);">
+                  ※日々の食費や欲しいものを過度に我慢する節約はストレスになりがちです。スマホ代や使っていないサブスクの解約など、一度の手続きで毎月自動的に数千円浮く固定費の見直しから始めるのが確実です。
+                </p>
+              </div>
+
+              <div style="margin-top: 1.5rem; text-align: center;">
+                <a href="#fixed-cost" class="btn btn-primary">固定費チェックをする →</a>
+              </div>
+
+              <div class="notice-box">
+                この結果は目安です。実際の契約内容や料金は、各サービスの公式サイトで確認してください。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           6. 格安SIMを選ぶ前のチェック (#sim-precheck)
+           ========================================== -->
+      <section id="page-sim-precheck" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>格安SIMを選ぶ前のチェック</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="article-container">
+            <h1 class="article-title">📱 格安SIMを選ぶ前の6つのチェックポイント</h1>
+            <p class="article-lead">「乗り換えて安くしたいけれど、失敗したらどうしよう」と不安な方へ。契約手続きを行う前に、以下の6項目をひとつずつ確認しておくと安心です。</p>
+
+            <div class="article-section">
+              <h2>1. 今のデータ使用量を確認する</h2>
+              <p>最も重要なのが「自分が毎月何GB使っているか」の把握です。現在契約しているキャリアのマイページ（My docomo、My au、My SoftBankなど）にログインし、過去3か月分のデータ通信量を確認しましょう。</p>
+              <p>「無制限プランに入っているけれど実際は月5GBしか使っていなかった」というケースも多く、実際の消費量に合ったプランを選ぶだけで大幅に安くなります。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>2. 通話時間と通話方法を確認する</h2>
+              <p>家族や友人との連絡はLINE通話などの無料アプリで済んでいるのか、それとも仕事や予約などで通常の電話番号発信をよく使うのかを確認します。</p>
+              <p>通常通話をほとんどしない場合は「通話オプションなし」にすれば月額料金を抑えられます。長電話が多い方は「5分かけ放題」や「完全かけ放題」のオプションが用意されている事業者を選びましょう。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>3. 自宅・職場・学校で使う場所の電波を考える</h2>
+              <p>スマートフォンを使う主な生活圏（自宅、職場、学校、通勤路など）の電波状況を確認します。格安SIMは大手キャリア（ドコモ・au・ソフトバンク・楽天モバイル）の電波を借りて提供されているため、生活圏で強いキャリアの回線を選ぶのが基本です。</p>
+              <p>また、自宅にWi-Fiがある場合は、スマホのモバイルデータ通信量を少なく抑えられるため、より小容量プランを選択できます。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>4. 乗り換え前に解約条件と端末残債を確認する</h2>
+              <p>現在のキャリアで端末を分割購入している場合、乗り換え後も端末の分割払いは継続します（一括清算も可能な場合が多いです）。</p>
+              <p>また、契約解除料（違約金）は多くのプランで撤廃されていますが、古い料金プランをご利用の場合は更新月や違約金の有無を念のため確認しておきましょう。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>5. 家族割・光回線セット割の影響を確認する</h2>
+              <p>家族で同じキャリアを使って割引を受けている場合や、自宅の固定インターネット回線（光回線）とのセット割引が適用されている場合は注意が必要です。</p>
+              <p>自分1人が他社へ乗り換えたことで、家族の月額料金が高くなったり、光回線の割引が減額される場合があります。世帯全体のトータル出費で得になるかを計算しましょう。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>6. 料金、キャンペーン、通信品質は各公式サイトで確認する</h2>
+              <p>格安SIMの料金プランやキャンペーン内容は頻繁に更新されます。また、混雑時間帯（お昼休みや夕方）の通信速度やサポート体制（店舗の有無、チャット対応など）も事業者ごとに異なります。</p>
+              <p>必ず各通信会社の公式サイトにアクセスし、最新の重要事項説明や注意事項をご自身の目で確認してください。</p>
+            </div>
+
+            <div class="notice-box">
+              <strong>乗り換え検討時のご注意</strong>
+              乗り換え（MNP）を行う際は、事前に現在お使いのスマホが乗り換え先の会社で動作確認されているか（動作確認済み端末一覧）も公式サイトで必ずチェックしてください。
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+              <a href="#sim-compare" class="btn btn-primary">格安SIM比較の考え方を見る →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           7. 格安SIM比較の考え方 (#sim-compare)
+           ========================================== -->
+      <section id="page-sim-compare" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>格安SIM比較の考え方</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <!-- 広告・アフィリエイト明示表記（必須表示） -->
+          <div class="pr-box">
+            <span class="pr-tag">PR</span>
+            <span>このページには広告・アフィリエイトリンクが含まれる場合があります（現在は準備中です）。</span>
+          </div>
+
+          <div class="article-container">
+            <h1 class="article-title">⚖️ 格安SIM比較の考え方</h1>
+            <p class="article-lead">
+              当サイトでは、根拠のない「人気No.1」「最安」「絶対おすすめ」「必ず得」といった断定的なランキング付けは行いません。<br />
+              利用者の使い方（ギガ数・通話頻度・サポート要望）によって最適な選択肢はまったく異なるためです。ここでは客観的な比較軸と整理方法を解説します。
+            </p>
+
+            <div class="article-section">
+              <h2>料金以外の「6つの比較基準」</h2>
+              <p>格安SIMを比較する際は、表面上の月額基本料だけでなく以下の要素を総合的に確認することが後悔しないコツです。</p>
+              
+              <ul style="padding-left: 1.25rem;">
+                <li><strong>データ容量の刻み:</strong> 1GB、3GB、5GB、10GB、20GBなど、自分の実利用量にぴったり合うプランがあるか</li>
+                <li><strong>通話オプションの柔軟性:</strong> 5分・10分の短時間かけ放題があるか、専用通話アプリが不要か</li>
+                <li><strong>通信速度と回線品質:</strong> お昼の12時台や夕方の通勤時間帯に極端な速度低下がないか（大手サブブランドやオンライン専用プランは比較的安定）</li>
+                <li><strong>サポート体制:</strong> 店舗で対面サポートを受けたいか、Webやチャットサポートだけで十分か</li>
+                <li><strong>初期費用と手数料:</strong> 契約事務手数料やSIM発行手数料が無料か有料か</li>
+                <li><strong>縛りと解約条件:</strong> 最低利用期間や違約金がないか、MNP転出がスムーズか</li>
+              </ul>
+            </div>
+
+            <div class="article-section">
+              <h2>格安SIMの3大タイプと特徴</h2>
+              <div class="table-responsive">
+                <table class="compare-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 25%;">タイプ</th>
+                      <th style="width: 35%;">特徴・メリット</th>
+                      <th style="width: 40%;">注意点・向いている人</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>大手キャリアのサブブランド</strong></td>
+                      <td>店舗サポートが利用でき、通信品質も大手並みに安定。家族割や固定回線セット割も充実。</td>
+                      <td>純粋な最安MVNOと比べるとやや高め。店舗でのサポートを重視したい方におすすめ。</td>
+                    </tr>
+                    <tr>
+                      <td><strong>オンライン専用プラン</strong></td>
+                      <td>手続きやサポートがWeb完結な分、中〜大容量（20GB〜）が割安。通信回線も高品質。</td>
+                      <td>店頭での相談ができないため、スマホの自己解決や初期設定に慣れている方向け。</td>
+                    </tr>
+                    <tr>
+                      <td><strong>独自MVNO（格安事業者）</strong></td>
+                      <td>小容量（1GB〜5GB）が非常に安く、余ったギガの繰り越しや低速無制限モードなど独自機能が豊富。</td>
+                      <td>お昼休みなどの混雑時に通信速度が低下する場合がある。データ通信が中心のライトユーザー向け。</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="article-section">
+              <h2>自分で書き込める比較整理シート</h2>
+              <p>各社の公式サイトで最新条件を調べながら、以下の空欄構造シートを使って比較してみましょう。</p>
+              
+              <div class="table-responsive">
+                <table class="compare-table">
+                  <thead>
+                    <tr>
+                      <th>確認項目</th>
+                      <th>候補A（公式サイトで確認）</th>
+                      <th>候補B（公式サイトで確認）</th>
+                      <th>現在の契約</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>サービス名</td>
+                      <td>（公式サイトで確認）</td>
+                      <td>（公式サイトで確認）</td>
+                      <td>現在のプラン名</td>
+                    </tr>
+                    <tr>
+                      <td>月間データ容量</td>
+                      <td>（例: 5GB）</td>
+                      <td>（例: 10GB）</td>
+                      <td>（現在の容量）</td>
+                    </tr>
+                    <tr>
+                      <td>月額基本料金</td>
+                      <td>（公式サイトで確認）</td>
+                      <td>（公式サイトで確認）</td>
+                      <td>（現在の月額）</td>
+                    </tr>
+                    <tr>
+                      <td>通話定額オプション</td>
+                      <td>（公式サイトで確認）</td>
+                      <td>（公式サイトで確認）</td>
+                      <td>（現在の通話料）</td>
+                    </tr>
+                    <tr>
+                      <td>利用回線（ドコモ/au/SB/楽天）</td>
+                      <td>（公式サイトで確認）</td>
+                      <td>（公式サイトで確認）</td>
+                      <td>（現在の回線）</td>
+                    </tr>
+                    <tr>
+                      <td>店舗サポートの有無</td>
+                      <td>（あり / なし）</td>
+                      <td>（あり / なし）</td>
+                      <td>（あり / なし）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 将来のPRリンク設置想定エリア（現在は準備中） -->
+            <div class="pr-action-card">
+              <span class="pr-tag">広告・PRリンク</span>
+              <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: var(--color-primary);">各社公式サイトで最新の料金・キャンペーンを確認する</h3>
+              <p style="font-size: 0.875rem; color: var(--color-text-sub); margin-top: 0.25rem;">
+                ※現在は広告リンク・アフィリエイトリンクは準備中です。公開準備が整い次第、明示的なPR表示とともにお知らせします。
+              </p>
+              <div class="pr-button-placeholder">
+                PRリンク：公式サイトで最新の料金・条件を確認する（※現在は準備中）
+              </div>
+            </div>
+
+            <div class="notice-box" style="margin-top: 2rem;">
+              <strong>客観的な情報収集のお願い</strong>
+              料金や割引条件、キャッシュバックなどのキャンペーン内容は日々変更されます。当サイトの解説を参考にした上で、最終的なご契約前には必ず各社公式サイトの案内をご確認ください。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           8. 家計簿の始め方 (#kakeibo-guide)
+           ========================================== -->
+      <section id="page-kakeibo-guide" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>家計簿の始め方</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="article-container">
+            <h1 class="article-title">📖 初心者のための挫折しない「家計簿の始め方」</h1>
+            <p class="article-lead">
+              「家計簿を始めてみたけれど、レシート入力が面倒ですぐやめてしまった」という経験はありませんか？<br />
+              家計管理で大切なのは、1円単位で完璧に記録することではなく、家計の大枠を把握することです。
+            </p>
+
+            <div class="article-section">
+              <h2>家計を構成する「5つの基本要素」</h2>
+              <p>家計のお金の流れは、大きく分けて次の5つに分類できます。</p>
+
+              <div class="table-responsive">
+                <table class="compare-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 25%;">項目</th>
+                      <th style="width: 40%;">具体例</th>
+                      <th style="width: 35%;">管理のポイント</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>1. 収入</strong></td>
+                      <td>給与手取り額、賞与、副収入など</td>
+                      <td>額面ではなく「実際に口座へ入金される手取り額」で考える。</td>
+                    </tr>
+                    <tr>
+                      <td><strong>2. 固定費</strong></td>
+                      <td>家賃、通信費、サブスク、保険、水道光熱費</td>
+                      <td>毎月ほぼ決まって出ていくお金。一度見直せばずっと効果が続く。</td>
+                    </tr>
+                    <tr>
+                      <td><strong>3. 変動費</strong></td>
+                      <td>食費、日用品費、交際費、娯楽費、被服費</td>
+                      <td>日々の行動で変わるお金。無理に削りすぎるとストレスの原因に。</td>
+                    </tr>
+                    <tr>
+                      <td><strong>4. 予算</strong></td>
+                      <td>各費目に使える毎月の上限目安額</td>
+                      <td>細かく分けすぎず、「変動費全体で月〇万円」のようにざっくり決める。</td>
+                    </tr>
+                    <tr>
+                      <td><strong>5. 貯金</strong></td>
+                      <td>生活防衛資金、目的別積立</td>
+                      <td>「余ったら貯金」ではなく「給料日に先に別口座へ移す（先取り）」が鉄則。</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="article-section">
+              <h2>家計簿を完璧に続けなくてよい理由</h2>
+              <p>多くの人が家計簿を挫折する原因は、「毎日のレシートを1枚ずつ品目別に打ち込もうとする」からです。</p>
+              <p>しかし、コーヒー代の150円をメモすることに何十分も時間をかける必要はありません。家計改善で最も効果的なのは、金額が大きく毎月自動で口座から引き落とされる「固定費」を把握することです。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>まず「月の固定費」を知ることから始めよう</h2>
+              <p>家計改善の第一歩として、まずは以下の3つだけをやってみましょう。</p>
+              <ol style="padding-left: 1.25rem;">
+                <li>通帳やクレジットカードの明細を開き、毎月定期的に引き落とされている項目を書き出す</li>
+                <li>当サイトの<a href="#fixed-cost" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">固定費チェック診断</a>に入力して、月額と年額の固定費合計を計算する</li>
+                <li>「使っていないのに引かれているサブスク」や「高すぎるスマホ代」がないかを確認する</li>
+              </ol>
+              <p>固定費さえスリムにしておけば、日々の買い物で細かく我慢しなくても自然とお金が手元に残るようになります。</p>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+              <a href="#fixed-cost" class="btn btn-primary">固定費チェック診断を試す →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           9. 固定費見直しの基本 (#fixed-guide)
+           ========================================== -->
+      <section id="page-fixed-guide" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>固定費見直しの基本</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="article-container">
+            <h1 class="article-title">💡 固定費見直しの基本とチェックポイント</h1>
+            <p class="article-lead">
+              支出の見直しには「固定費」と「変動費」の2種類があります。<br />
+              なぜ節約は固定費から始めるべきなのか、主要な5項目で見直す前に確認すべきポイントをまとめました。
+            </p>
+
+            <div class="article-section">
+              <h2>固定費と変動費の違い</h2>
+              <p>食費や電気のこまめな消灯といった「変動費の節約」は、毎日の生活の中で常に我慢や意識を強いられ、努力をやめると出費が戻ってしまいます。</p>
+              <p>一方で、スマホ代やサブスクなどの「固定費の節約」は、<strong>見直し手続きを行うのは最初の1回だけ</strong>です。一度手続きを完了すれば、翌月以降は生活満足度を落とすことなく、毎月自動的に数千円〜数万円の支出が減り続けます。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>主要項目別の「見直す前に確認すべきこと」</h2>
+
+              <h3>1. スマホ代（通信費）</h3>
+              <p>毎月のデータ使用量（GB）、通話オプションの要否、端末の分割残金を確認します。大手キャリアから格安SIMやサブブランドへ変更するだけで月3,000円〜5,000円程度の節約になるケースが多く、最も効果が出やすい分野です。</p>
+
+              <h3>2. サブスクリプション</h3>
+              <p>直近1か月以内にそのサービスを利用したか、年間契約の自動更新時期がいつかを確認します。「無料期間だけ使うつもりで忘れていたもの」は即解約しましょう。</p>
+
+              <h3>3. 保険料</h3>
+              <p>日本には国民健康保険や健康保険による「高額療養費制度」があり、一般的な所得であれば1か月の医療費自己負担には上限が設けられています。公的医療保険の保障内容を理解した上で、民間の医療保険や生命保険で過剰・重複な保障に入っていないか確認しましょう。</p>
+
+              <h3>4. 電気・ガス</h3>
+              <p>電力・ガス会社を変更しても、送電網やガス管は従来と同じものが使われるため、供給の安全性や品質が変わることはありません。ただし、解約時の違約金や燃料費調整額の計算方法については各社公式サイトで確認が必要です。</p>
+
+              <h3>5. インターネット回線</h3>
+              <p>光回線の工事費残債やプロバイダの解約違約金、スマホとのセット割の適用条件を確認します。キャッシュバックキャンペーンを利用する場合は、受け取り時期や手続き期限をメモしておきましょう。</p>
+            </div>
+
+            <div class="notice-box">
+              <strong>特定サービスへの誘導はいたしません</strong>
+              利用者の居住地域や家族構成、ライフスタイルによって最適なサービスは異なります。特定事業者への乗り換えを断定的に勧めることはせず、公式サイトで条件を確認して納得の上で判断することをおすすめします。
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+              <a href="#sim-cost" class="btn btn-primary">スマホ代年間コスト計算へ戻る →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           10. 運営者情報 (#about)
+           ========================================== -->
+      <section id="page-about" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>運営者情報</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="article-container">
+            <h1 class="article-title">👤 運営者情報</h1>
+            <p class="article-lead">「通信費・固定費見直しナビ」の運営者に関する情報です。</p>
+
+            <div class="table-responsive">
+              <table class="compare-table">
+                <tbody>
+                  <tr>
+                    <th style="width: 30%;">サイト名</th>
+                    <td>通信費・固定費見直しナビ</td>
+                  </tr>
+                  <tr>
+                    <th>サイト区分</th>
+                    <td>個人が運営する情報サイト</td>
+                  </tr>
+                  <tr>
+                    <th>運営目的</th>
+                    <td>毎月のスマホ代、サブスク代、固定費を見える化し、利用者が自分に合う通信費見直しの方法を調べられるようにすること</td>
+                  </tr>
+                  <tr>
+                    <th>連絡先</th>
+                    <td>準備中（お問い合わせページをご覧ください）</td>
+                  </tr>
+                  <tr>
+                    <th>開設時期</th>
+                    <td>2025年</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="notice-box">
+              <strong>プライバシーへの配慮</strong>
+              当サイトは個人のプライバシー保護のため、実名・住所・個人電話番号等の公開は控えております。また、架空の会社名、経歴、資格、受賞歴などを偽って掲載することは一切ありません。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           11. 免責事項 (#disclaimer)
+           ========================================== -->
+      <section id="page-disclaimer" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>免責事項</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="article-container">
+            <h1 class="article-title">⚠️ 免責事項</h1>
+            <p class="article-lead">当サイトをご利用いただく際は、以下の免責事項を必ずご確認ください。</p>
+
+            <div class="article-section">
+              <h2>1. 計算結果は目安です</h2>
+              <p>当サイトが提供する各種シミュレーター（スマホ代、サブスク代、固定費、貯金シミュレーター）の試算結果は、利用者が入力した数値をもとにした簡易的な試算の目安であり、実際の請求金額や将来の貯蓄額を保証するものではありません。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>2. 通信料金や契約条件の変更について</h2>
+              <p>各通信事業者や定額サービス事業者の料金プラン、各種割引、キャンペーン内容、契約解除条件などは、予告なく変更または終了される場合があります。</p>
+              <p>プランの変更や乗り換え契約を行う前に、必ず各サービスの公式サイトにて最新の契約約款・提供条件・重要事項説明をご確認ください。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>3. 投資・借金・金融商品の判断について</h2>
+              <p>当サイトは家計の見直しや通信費の考え方に関する一般的な情報を提供するものであり、特定の投資行動、金融商品の購入、借入れ等の判断を勧誘・推奨するものではありません。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>4. 情報の正確性と損害への責任について</h2>
+              <p>当サイトに掲載されている情報については、可能な限り正確を期しておりますが、その正確性、完全性、最新性、ならびに特定の節約効果を保証するものではありません。</p>
+              <p>当サイトの利用により生じたいかなる損害・損失についても、当サイト運営者は一切の責任を負いかねますので、あらかじめご了承ください。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           12. プライバシーポリシー (#privacy)
+           ========================================== -->
+      <section id="page-privacy" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>プライバシーポリシー</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="article-container">
+            <h1 class="article-title">🔒 プライバシーポリシー</h1>
+            <p class="article-lead">当サイトにおける個人情報の取り扱いおよび計算データの安全性について説明します。</p>
+
+            <div class="article-section">
+              <h2>1. 個人情報の収集・保存について</h2>
+              <p>当サイトでは、氏名、住所、電話番号、メールアドレスなどの個人情報を収集・保存する仕組み（会員登録、ログイン、入力フォームの送信など）は設けておりません。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>2. 計算データのブラウザ内処理について</h2>
+              <p>当サイトの計算ツールに入力された数値（スマホ代、サブスク代、固定費の金額等）は、すべてご利用の端末（ブラウザ）内でのみJavaScriptによって計算処理されます。</p>
+              <p>入力内容が外部サーバーに送信されたり、データベースに保存されたりすることは一切ありませんので安心してご利用ください。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>3. Cookieおよびアクセス解析について</h2>
+              <p>現時点で当サイトでは、利用者を追跡する高度なCookieや有料のアクセス追跡ツールは導入しておりません。将来的にサイト改善を目的とした匿名のアクセス解析を行う場合でも、個人を特定できる情報は収集いたしません。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>4. 将来的なアフィリエイト広告導入時の取り扱い</h2>
+              <p>将来的に成果報酬型のアフィリエイト広告（もしもアフィリエイト等）を導入する場合、広告リンクのクリック状況等を測定するためにCookie等の技術が利用される場合があります。これらは各広告配信事業者のプライバシーポリシーに準拠します。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           13. 広告・PR方針 (#ad-policy)
+           ========================================== -->
+      <section id="page-ad-policy" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>広告・PR方針</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="article-container">
+            <h1 class="article-title">📢 広告・PR方針</h1>
+            <p class="article-lead">「通信費・固定費見直しナビ」における広告および提携に関する透明性の確保方針です。</p>
+
+            <div class="article-section">
+              <h2>1. 現時点での広告掲載状況</h2>
+              <p><strong>現時点において、当サイトにはアフィリエイトリンク、広告ID、Google AdSense、有料スポンサー広告等の広告コードは一切掲載していません。</strong></p>
+            </div>
+
+            <div class="article-section">
+              <h2>2. 将来的なアフィリエイト広告の掲載可能性</h2>
+              <p>当サイトでは将来、サイトの運営・維持管理費を賄うため、もしもアフィリエイト等のアフィリエイトサービスプロバイダ（ASP）を通じた成果報酬型の広告リンクを掲載する可能性があります。</p>
+            </div>
+
+            <div class="article-section">
+              <h2>3. 広告表示の明記とステマ防止の徹底</h2>
+              <p>広告リンクやPR要素を掲載する場合は、利用者が広告であることを一目で判別できるよう、景品表示法（ステルスマーケティング規制）を遵守し、以下の対策を徹底します。</p>
+              <ul style="padding-left: 1.25rem;">
+                <li>対象ページの目立つ位置に「PR：このページには広告が含まれます」等の表示を明記します。</li>
+                <li>広告リンクの周辺に「PRリンク」や「プロモーション」と分かりやすく表示します。</li>
+                <li>広告であることを隠して読者を欺くような表現（ステルスマーケティング）は絶対に行いません。</li>
+              </ul>
+            </div>
+
+            <div class="article-section">
+              <h2>4. 報酬の発生と編集の独立性</h2>
+              <p>将来広告を導入した場合、利用者が当サイト内のPRリンクを経由して提携先サービスに申し込んだ際に、当サイト運営者が広告主から成果報酬を受け取る場合があります。</p>
+              <p>ただし、報酬の高低によって意図的に特定の事業者を優遇したり、根拠のない「No.1」表記を行ったりすることは決してありません。常に中立・客観的な視点での情報整理を心がけます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           14. お問い合わせ (#contact)
+           ========================================== -->
+      <section id="page-contact" class="page-view">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="#top">ホーム</a></li>
+              <li>お問い合わせ</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="article-container">
+            <h1 class="article-title">✉️ お問い合わせ</h1>
+            <p class="article-lead">当サイトに関するお問い合わせについてのご案内です。</p>
+
+            <div class="notice-box" style="margin-bottom: 1.5rem;">
+              <strong>お問い合わせ窓口は現在準備中です</strong>
+              当サイトはお問い合わせフォームの設置を現在準備中です。ご不便をおかけしますが、今しばらくお待ちください。
+            </div>
+
+            <div class="article-section">
+              <h2>よくあるご質問（FAQ）</h2>
+              
+              <h3>Q. ツールの利用にお金はかかりますか？</h3>
+              <p>いいえ、すべての計算シミュレーターは完全無料でご利用いただけます。課金や会員登録を要求することは一切ありません。</p>
+
+              <h3>Q. 入力した金額が外部に漏れる心配はありませんか？</h3>
+              <p>ありません。当サイトの計算プログラムはすべてお使いのスマートフォンやパソコンのブラウザ内だけで完結して計算しています。入力した情報が外部サーバーへ送信されることはありません。</p>
+
+              <h3>Q. 特定の携帯会社への乗り換えを勧誘されることはありますか？</h3>
+              <p>ありません。当サイトはご自身に合った選択肢を見つけるための考え方と計算機能を提供するものであり、特定の会社への契約を強制・断定することはありません。</p>
+            </div>
+
+            <!-- GitHub Pages公開案内（ユーザー指示要件） -->
+            <div class="github-pages-box">
+              <strong style="color: var(--color-primary); font-size: 0.95rem;">📦 GitHub Pagesでの公開手順（静的サイト運用ガイド）</strong>
+              <p style="margin-top: 0.35rem; color: var(--color-text-sub);">
+                本サイトは <code>index.html</code>、<code>style.css</code>、<code>script.js</code> の3ファイルだけで動作する完全な静的サイトです。GitHubのリポジトリにそのまま配置して公開できます。
+              </p>
+              <pre><code># 構成ファイル一覧
+├── index.html   (全14ページを統合したHTML5)
+├── style.css    (濃紺・白・薄青・緑のレスポンシブCSS)
+└── script.js    (ルーター・バリデーション・計算ロジック)
+
+# GitHub Pages公開手順
+1. GitHubで新しい公開リポジトリを作成
+2. index.html, style.css, script.js をリポジトリのルートへプッシュ
+3. リポジトリの [Settings] → [Pages] を開く
+4. Sourceで「Deploy from a branch」、Branchで「main / (root)」を選択してSave
+5. 数分後に公開URL（https://ユーザー名.github.io/リポジトリ名/）で閲覧可能になります</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>通信費・固定費見直しナビ</h3>
+            <p>毎月のスマホ代、サブスク代、固定費を見える化し、利用者が自分に合う通信費見直しの方法を調べられる静的Webサイトです。登録不要・ブラウザ完結で安全にご利用いただけます。</p>
+          </div>
+
+          <div class="footer-col">
+            <h4>無料計算ツール</h4>
+            <ul>
+              <li><a href="#sim-cost">スマホ代年間コスト計算</a></li>
+              <li><a href="#sub-cost">サブスク年間コスト計算</a></li>
+              <li><a href="#fixed-cost">固定費チェック診断</a></li>
+              <li><a href="#savings-calc">貯金目標シミュレーター</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>お役立ちガイド</h4>
+            <ul>
+              <li><a href="#sim-precheck">格安SIMを選ぶ前のチェック</a></li>
+              <li><a href="#sim-compare">格安SIM比較の考え方</a></li>
+              <li><a href="#kakeibo-guide">家計簿の始め方</a></li>
+              <li><a href="#fixed-guide">固定費見直しの基本</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>運営・ポリシー</h4>
+            <ul>
+              <li><a href="#about">運営者情報</a></li>
+              <li><a href="#disclaimer">免責事項</a></li>
+              <li><a href="#privacy">プライバシーポリシー</a></li>
+              <li><a href="#ad-policy">広告・PR方針</a></li>
+              <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025-2026 通信費・固定費見直しナビ All Rights Reserved. 当サイトの計算結果は目安です。契約前に必ず各公式サイトでご確認ください。</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- スクリプト（相対パス） -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
